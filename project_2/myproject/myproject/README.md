@@ -2,7 +2,7 @@
 
 ## Установка
 ```bash
-git clone <ссылка на репозиторий>
+git clone https://github.com/Hat1maN/LR2
 cd myproject
 python -m venv venv
 source venv/bin/activate  # или venv\Scripts\activate на Windows
