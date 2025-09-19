@@ -19,28 +19,46 @@
     </div>
 
     <!-- Галерея из 5 картинок -->
-    <div class="image-gallery">
-        <div class="img-box">
-            <img src="{% static 'images/img1.jpg' %}" alt="Картинка 1" width="200">
-            <p class="img-caption">Броненосец</p>
+<h2>Животные</h2>
+
+<ul class="animal-list">
+    <li class="animal-item">
+        <img src="{% static 'images/img1.jpg' %}" alt="Броненосец">
+        <div class="animal-info">
+            <h3>Броненосец</h3>
+            <p>Млекопитающее c защитным панцирем, обитающее в Южной Америке.</p>
         </div>
-        <div class="img-box">
-            <img src="{% static 'images/img2.jpg' %}" alt="Картинка 2" width="200">
-            <p class="img-caption">Хамелеон</p>
+    </li>
+    <li class="animal-item">
+        <img src="{% static 'images/img2.jpg' %}" alt="Хамелеон">
+        <div class="animal-info">
+            <h3>Хамелеон</h3>
+            <p>Рептилия, способная менять окраску и двигающая глазами независимо.</p>
         </div>
-        <div class="img-box">
-            <img src="{% static 'images/img3.jpg' %}" alt="Картинка 3" width="200">
-            <p class="img-caption">Какаду</p>
+    </li>
+    <li class="animal-item">
+        <img src="{% static 'images/img3.jpg' %}" alt="Какаду">
+        <div class="animal-info">
+            <h3>Какаду</h3>
+            <p>Попугай c ярким хохолком, обитающий в Австралии и на островах.</p>
         </div>
-        <div class="img-box">
-            <img src="{% static 'images/img4.jpg' %}" alt="Картинка 4" width="200">
-            <p class="img-caption">Ленивец</p>
+    </li>
+    <li class="animal-item">
+        <img src="{% static 'images/img4.jpg' %}" alt="Ленивец">
+        <div class="animal-info">
+            <h3>Ленивец</h3>
+            <p>Медлительное млекопитающее, большую часть жизни проводит на деревьях.</p>
         </div>
-        <div class="img-box">
-            <img src="{% static 'images/img5.jpg' %}" alt="Картинка 5" width="200">
-            <p class="img-caption">Птенцы снегирей</p>
+    </li>
+    <li class="animal-item">
+        <img src="{% static 'images/img5.jpg' %}" alt="Птенцы снегирей">
+        <div class="animal-info">
+            <h3>Птенцы снегирей</h3>
+            <p>Молодые птицы снегирей в гнезде, ожидающие кормления.</p>
         </div>
-    </div>
+    </li>
+</ul>
+
 
     <script>
         function toggleTheme() {

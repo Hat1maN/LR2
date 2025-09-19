@@ -110,6 +110,64 @@ body.light-mode .img-caption {
 body.dark-mode .img-caption {
     color: #ffffff; /* белый текст */
 }
-p {
+p, h1, ul, h2 {
     text-align: center;
+}
+.animal-list {
+    list-style: none;
+    padding: 0;
+    margin: 40px auto;
+    max-width: 900px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.animal-item {
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.animal-item:hover {
+    transform: translateY(-5px);
+}
+
+.animal-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.animal-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.animal-info h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.animal-info p {
+    font-size: 14px;
+    color: #555;
+}
+
+body.dark-mode .animal-item {
+    background-color: #1c1c1c;
+}
+
+body.dark-mode .animal-info p {
+    color: #ccc;
+}
+.animal-item img {
+    width: 100%;
+    height: auto; /* ← это главное */
+    object-fit: contain; /* картинка полностью помещается */
 }
