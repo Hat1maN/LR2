@@ -56,3 +56,60 @@ body.dark-mode a {
 .image-gallery img:hover {
     transform: scale(1.05);
 }
+/* Главная картинка */
+.main-image {
+    text-align: center;
+    margin: 30px 0; /* отступ сверху и снизу */
+}
+
+.main-image img {
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.main-image .img-caption {
+    margin-top: 10px;
+    font-style: italic;
+}
+
+/* Галерея картинок */
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px; /* больше расстояние между картинками */
+    margin-top: 30px;
+}
+
+.img-box {
+    text-align: center;
+}
+
+.img-box img {
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.img-box img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.img-caption {
+    margin-top: 8px;
+    font-size: 14px;
+    font-style: italic;
+}
+
+/* Цвет подписи зависит от темы */
+body.light-mode .img-caption {
+    color: #000000; /* чёрный текст */
+}
+
+body.dark-mode .img-caption {
+    color: #ffffff; /* белый текст */
+}
+p {
+    text-align: center;
+}

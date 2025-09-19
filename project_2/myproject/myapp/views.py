@@ -22,3 +22,8 @@ def encyclopedia_view(request):
     if 'theme' not in request.COOKIES:
         response.set_cookie('theme', 'light')
     return response
+    
+articles = {
+    "python": "Python — язык программирования",
+    "django": "Django — веб-фреймворк"
+}
