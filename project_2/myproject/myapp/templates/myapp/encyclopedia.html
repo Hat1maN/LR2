@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Онлайн-энциклопедия</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body class="{{ theme }}">
+    <button class="theme-toggle" onclick="toggleTheme()">Сменить тему</button>
+
+    <h1>Добро пожаловать в онлайн-энциклопедию</h1>
+    <p>Здесь будет ваш текстовый контент.</p>
+
+    <!-- Первая (главная) картинка -->
+    <div class="main-image">
+        <img src="{% static 'images/example.jpg' %}" alt="Главная картинка" width="400">
+        <p class="img-caption">Главная картинка энциклопедии</p>
+    </div>
+
+    <!-- Галерея из 5 картинок -->
+    <div class="image-gallery">
+        <div class="img-box">
+            <img src="{% static 'images/img1.jpg' %}" alt="Картинка 1" width="200">
+            <p class="img-caption">Описание картинки 1</p>
+        </div>
+        <div class="img-box">
+            <img src="{% static 'images/img2.jpg' %}" alt="Картинка 2" width="200">
+            <p class="img-caption">Описание картинки 2</p>
+        </div>
+        <div class="img-box">
+            <img src="{% static 'images/img3.jpg' %}" alt="Картинка 3" width="200">
+            <p class="img-caption">Описание картинки 3</p>
+        </div>
+        <div class="img-box">
+            <img src="{% static 'images/img4.jpg' %}" alt="Картинка 4" width="200">
+            <p class="img-caption">Описание картинки 4</p>
+        </div>
+        <div class="img-box">
+            <img src="{% static 'images/img5.jpg' %}" alt="Картинка 5" width="200">
+            <p class="img-caption">Описание картинки 5</p>
+        </div>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            const currentTheme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            document.body.classList.remove(currentTheme + '-mode');
+            document.body.classList.add(newTheme + '-mode');
+            document.cookie = "theme=" + newTheme + "; path=/";
+        }
+    </script>
+</body>
+</html>

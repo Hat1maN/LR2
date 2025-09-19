@@ -7,9 +7,52 @@ body {
     padding: 20px;
     background-color: #f5f5f5;
 }
-h1 {
-    color: #2c3e50;
-    text-align: center;
-    margin-bottom: 30px;
-    font-weight: 600;
+/* Светлая тема */
+body.light-mode {
+    background-color: #ffffff;
+    color: #000000; /* чёрный текст */
+}
+
+/* Тёмная тема */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff; /* белый текст */
+}
+
+/* Все ссылки тоже меняем */
+body.light-mode a {
+    color: #0000ee; /* стандартная синяя ссылка */
+}
+
+body.dark-mode a {
+    color: #66ccff; /* светлая ссылка */
+}
+
+/* Кнопка переключения темы */
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 8px 12px;
+    cursor: pointer;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+/* Галерея картинок */
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.image-gallery img {
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.image-gallery img:hover {
+    transform: scale(1.05);
 }
