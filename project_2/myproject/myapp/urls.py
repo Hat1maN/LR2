@@ -9,5 +9,5 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('encyclopedia/', views.encyclopedia_view, name='encyclopedia'),
+    path('', views.encyclopedia_view, name='encyclopedia'),
 ]
